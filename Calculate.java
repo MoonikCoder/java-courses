@@ -1,9 +1,23 @@
-public class Calculate{
-	public static void main(String[] args){
-		System.out.println("Calculate...");
-		int first = Integer.valueOf(args[0]);
-		int second = Integer.valueOf(args[1]);
-		int sum = first + second;
-		System.out.println("Sum = " + sum);
+/*
+ * Класс реализует калькулятор.
+ * */
+
+package Calculate;
+
+public class Calculate {
+	private int result;
+	
+	public void add(int ... params){
+		for(Integer param : params){
+			this.result += param;
+		}
+	}
+	
+	public int getResult(){
+		return this.result;
+	}
+	
+	public void cleanResult(){
+		this.result = 0;
 	}
 }
